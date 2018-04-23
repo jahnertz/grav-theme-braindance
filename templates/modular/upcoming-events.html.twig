@@ -1,0 +1,19 @@
+<div class="modular-row upcoming-events callout">
+        {#{% set showcase_image = page.media.images|first %}
+        {% if showcase_image %}#}
+        <div class='showcase-event'>
+            {{ shortcode.section.showcase }}
+        </div>
+        {#{% endif %}#}
+    {% set collection = page.collection() %}
+        {% block content %}
+            <div class="content-wrapper blog-content-list grid pure-g">
+                        <div class="block size-2-3 pure-u-2-3">
+                            {% include 'partials/events-item.html.twig' with {'blog':page, 'page':collection.first(), 'truncate':true, 'grid_only':true} %}
+                        </div>
+            </div>
+            <div>
+            {{ page.content }}
+            </div>
+        {% endblock %}
+</div>

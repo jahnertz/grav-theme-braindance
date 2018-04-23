@@ -1,0 +1,145 @@
+// Your custom SCSS should be written here...
+@import "footer";
+@import "typography";
+
+$text-bg:       lighten($page-bg, 10%); 
+$header-bg:     lighten($page-bg, 10%);
+
+
+.grav-lightslider {
+    .lSSlideOuter {
+        .lSPager.lSpg {
+            > li a {
+                z-index: 1;
+            }
+        }
+    }
+}
+
+body {
+    #body {
+       max-width:1280px;
+       margin:0 auto; 
+        @include breakpoint(mobile-only) {
+            padding-top: 5rem;
+        }
+    }
+    #body > script:first-child + .grav-lightslider {
+       margin-top: -3rem;
+    }
+    div#sb-site {
+        background-color:$page-bg;
+    }
+    img.left {
+        padding-right:1rem;
+    }
+    img.right{
+        padding-left:1rem;
+    }
+}
+
+
+.callout {
+    padding: $content-padding;
+    background: $text-bg;
+    margin-bottom:20px;
+    box-shadow: 0 0 5px $light-gray;
+    #upcoming {
+        padding:0;
+        list-style:none;
+        li {
+            img {
+                width:100%;
+            }
+        }
+    }
+    &.upcoming-events {
+        div.showcase-event {
+            //padding: 15%;
+            //background-size: cover;
+            max-height:380px;
+            overflow: hidden;
+            border-radius: 3px;
+            margin-bottom:1rem;
+            @include breakpoint(mobile-only) {
+                margin-bottom: 0;
+            }
+            p {
+                margin:0;
+                img {
+                    width:100%;
+                }
+            }
+        }
+    }
+    &.blog-latest {
+        div#listing {
+            padding: 0 10px;
+            .list-item .list-blog-header h4 {
+                text-align: left;
+            }
+        }
+    }
+    div.event-thumb-grid {
+        text-align: left;
+        background-color: $white;
+        border-radius: 3px;
+        overflow: hidden;
+        @include breakpoint(no-mobile){
+            padding:10px 5px 0;
+        }
+        span {
+            padding:0 5px;
+        }
+        img {
+            border-radius: 0;
+            box-shadow: 0 0 5px $light-gray;
+        }
+    }
+    div.blog-content-list {
+        .list-item {
+            text-align: center;
+            img {
+                display:inline-block;
+            }
+        }
+    }
+    h1, h2, h3, h4, h5, .center {
+        text-align: center;
+    }
+}
+
+#header {
+    background: $header-bg;
+    #logo {
+        padding:1rem;
+        max-width: 70%;
+        img {
+            max-height: $header-height - 2rem;
+        }
+    }
+}
+
+#panel {
+    .navigation{
+        li {
+            &.active{
+                & > a {
+                    color: $page-bg;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    #contact {
+        p {
+            @include clearfix;
+            @include breakpoint(mobile-only){
+                line-height: 1rem;
+                font-size: .75rem;
+            }
+        }
+    }
+}

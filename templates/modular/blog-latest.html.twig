@@ -1,0 +1,39 @@
+<div class="modular-row blog-latest callout">
+        {% set blog =  page.find('{{config.blog.route}}') %}
+        {% set image = page.media.images|first %}
+        {% if image %}
+            {{ image.cropResize(400,400).html('','','align-'~page.header.image_align) }}
+        {% endif %}
+        <p>{{ blog.url }}</p>
+    {% set collection = page.collection() %}
+
+        {% block content %}
+        {% set blog_image = page.media.images|first.grayscale().contrast(20).brightness(-100).colorize(-35,81,122) %}
+
+        {% if blog_image %}
+        <div class="flush-top blog-header blog-header-image" style="background-image: url({{ blog_image.url }});">
+        {% else %}
+        <div class="blog-header">
+        {% endif %}
+            {{ page.content }}
+        </div>
+
+            {% if config.plugins.breadcrumbs.enabled %}
+                {% include 'partials/breadcrumbs.html.twig' %}
+            {% endif %}
+
+        <div class="content-wrapper blog-content-list grid pure-g">
+            {% for child in collection %}
+                <div id="listing" class="block pure-u-1 pure-u-md-1-3 h-feed">
+                        {% include 'partials/blog_item.html.twig' with {'blog':blog, 'page':child, 'truncate':true, 'hidetags':true} %}
+                </div>
+            {% endfor %}
+            {#<div id="sidebar" class="block size-1-3 pure-u-1-3">
+                {% include 'partials/sidebar.html.twig' with {'blog':blog} %}
+            </div>#}
+        </div>
+        {% endblock %}
+        <div class='cta-buttons center'>    
+        <a class="button-secondary" href="{{ blog.url }}">More Posts</a>
+        </div>
+</div>

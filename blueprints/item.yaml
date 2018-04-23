@@ -1,0 +1,168 @@
+title: Item
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        blog:
+          type: tab
+          title: Blog Item
+
+          fields:
+
+            header_image:
+              type: section
+              title: Header Image
+              underline: true
+
+            header.header_image:
+              type: toggle
+              toggleable: true
+              label: Display Header Image
+              help: Enabled displaying of a header image
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+
+            header.header_image_file:
+              type: text
+              toggleable: true
+              label: Image File
+              help: image filename that exists in the page folder. If not provided, will use the first image found.
+              placeholder: For example: myimage.jpg
+            
+            header.header_image_crop:
+              type: toggle
+              toggleable: true
+              label: Crop Header Image
+              help: Crop the header image to specified dimensions (or else default dimensions)
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+
+            header.header_image_width:
+              type: text
+              toggleable: true
+              label: Image Width
+              size: small
+              help: Header width in px
+              placeholder: Default is 900
+              validate:
+                type: int
+                min: 0
+                max: 5000
+
+            header.header_image_height:
+              type: text
+              toggleable: true
+              label: Image Height
+              size: small
+              help: Header height in px
+              placeholder: Default is 300
+              validate:
+                type: int
+                min: 0
+                max: 5000
+
+
+            summary:
+              type: section
+              title: Summary
+              underline: true
+
+
+            header.summary.enabled:
+              type: toggle
+              toggleable: true
+              label: Summary
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+
+            header.summary.format:
+              type: select
+              toggleable: true
+              label: Format
+              classes: fancy
+              options:
+                'short': 'Use the first occurence of delimter or size'
+                'long': 'Summary delimiter will be ignored'
+
+            header.summary.size:
+              type: text
+              toggleable: true
+              label: Size
+              classes: large
+              placeholder: 300
+              validate:
+                type: int
+                min: 1
+
+            header.summary.delimiter:
+              type: text
+              toggleable: true
+              label: Summary delimiter
+              classes: large
+              placeholder: ===
+              
+        open_graph:
+          type: tab
+          title: OpenGraph
+
+          fields:
+
+            open_graph:
+              type: section
+              title: OpenGraph Overrides
+              underline: true
+            
+            header.og.title:
+              type: text
+              toggleable: true
+              label: OG Title
+              help: Title used in OpenGraph metadata for link sharing.
+              size: medium
+              placeholder: Custom Sharing Title
+            
+            header.og.type:
+              type: text
+              toggleable: true
+              label: OG Content Type
+              help: Content type used in OpenGraph metadata for link sharing.
+              size: medium
+              placeholder: Article
+              default: Article
+            
+            header.og.description:
+              type: text
+              toggleable: true
+              label: OG Description
+              help: Title used in OpenGraph metadata for link sharing.
+              size: medium
+              placeholder: Custom Description
+            
+            header.og.image.custom:
+              type: toggle
+              toggleable: true
+              label: OG Image
+              highlight: 2
+              default: 1
+              options:
+                0: Default
+                1: Generated
+                2: Custom
+                
+            header.og.image.uri:
+              type: text
+              toggleable: true
+              label: OG Image URI
+              help: Title used in OpenGraph metadata for link sharing (Relative to page.) If none is specified, an image will be generated.
+              size: medium
+              placeholder: Generated.jpg

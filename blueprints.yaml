@@ -1,0 +1,216 @@
+name: Braindance
+version: 1.0.0
+description: "An update of the original XXXX theme using theme inheritance with the Antimatter theme by the Grav team"
+icon: music
+author:
+  name: Jordan Han
+  email: design@20-20.asia
+  url: http://jhanrahan.com.au
+
+form:
+  validation: loose
+  fields:
+    default_lang:
+      type: text
+      size: x-small
+      label: Default lang
+      default: 'en'
+      validate:
+        type: text
+
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+          
+    header_section:
+        type: section
+        title: Header
+        underline: true
+        
+    logo_section:
+        type: section
+        title: Logo
+        underline: false
+      
+    logo.enabled:
+        type: toggle
+        label: Custom Logo Image
+        highlight: 1
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type:bool
+          
+    logo.src:
+        type: text
+        label: Custom Logo Image
+        placeholder: images/logo.jpg
+        help: Display custom logo image
+        
+    splash_section:
+        type: section
+        title: Splash
+        underline: false
+                
+    splash.src:
+      type: text
+      toggleable: true
+      label: Default Splash Image
+      help: Splash image filename relative to site root
+      placeholder: Example: images/splash.jpg
+    
+    splash.height:
+      type: text
+      toggleable: true
+      label: Default Splash Height
+      size: small
+      help: Height of splash in pixels
+      placeholder: default is 256
+      default: 256
+      vlaidate:
+        type: int
+        min: 0
+        max: 5000
+        
+    footer_settings:
+        type: section
+        title: Footer
+        underline: true
+            
+    footer.length:
+        type: toggle
+        label: Footer Style
+        default: 1              
+        options:
+          0: Off
+          1: Short
+          2: Full
+                
+    contact_info:
+        type: section
+        title: Contact Info 
+        underline: false
+        
+    contact.address.line_1:
+      type: text
+      label: Address Line 1
+      placeholder: 123 Sesame St.
+      default: 20a-20b La Fuerza,
+      
+    contact.address.line_2:
+      type: text
+      label: Address Line 2
+      placeholder: New York City,
+      default: 2241 Chino Roches Ave.
+      
+    contact.address.line_3:
+      type: text
+      label: Address Line 3
+      placeholder: NY, USA
+      default: Makati, Metro Manila
+      
+    contact.address.coords:
+      type: text
+      label: GPS coords
+      size: medium
+      placeholder: 14.545033,121.0143153
+    
+    contact.address.googlemapsurl:
+      type: text
+      label: Google Maps URL
+      size: large
+      placeholder: https://www.google.com.ph/maps/
+    
+    contact.telephone:
+      type: text
+      label: Telephone 1
+      size: small
+      placeholder: +20 2020 202 020
+      default: +20 2020 202 020
+    
+    contact.email:
+      type: text
+      label: Email
+      size: medium
+      placeholder: info@20-20.asia
+      default: info@20-20.asia
+
+    social_media:
+      type: section
+      title: Social Media
+      underline: false
+
+    social.name1:
+      type: text
+      label: Social Media Blog 1
+      size: medium
+      placeholder: Blog Name
+      default: XX XX
+
+    social.facebook1:
+      type: text
+      label: Facebook 1 @
+      size: medium
+      placeholder: facebook_tag
+      default: 20-20bar
+
+    social.instagram1:
+      type: text
+      label: instagram 1 @
+      size: medium
+      placeholder: instagram_tag
+      default: 20-20bar
+
+    social.name2:
+      type: text
+      label: Social Media Blog 2
+      size: medium
+      placeholder: Blog name
+      default: 20-20
+
+    social.facebook2:
+      type: text
+      label: Facebook 2 @
+      size: medium
+      placeholder: facebook_tag
+      default: 20-20club
+
+    social.instagram2:
+      type: text
+      label: instagram 2 @
+      size: medium
+      placeholder: instagram_tag
+      default: 20-20club
+      
+    open_graph:
+        type: section
+        title: Opengraph
+        underline: true
+        
+    opengraph.default_image:
+        type: text
+        label: Default Opengraph Image
+        size: large
+        help: Default image for opengraph link sharing, used if the page image isn't set and can't be generated. Relative to theme root.
+        placeholder: images/xxxx-og.jpg
+        default: images/xxxx-og.jpg
+      
+    face_book:
+        type: section
+        title: Facebook
+        underline: true
+        
+    facebook.appid:
+      type: text
+      label: App ID
+      size: medium
+      placeholder: 000000000000000

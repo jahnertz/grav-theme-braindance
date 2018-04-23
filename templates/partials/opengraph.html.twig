@@ -1,0 +1,39 @@
+{% block opengraph %}
+    <meta property="og:url" content="{{ page.url(true) }}" />
+    <meta property="og:title" content="{{ page.header.og.title|default(page.title ~ ' | ' ~ site.title) }}" />
+    <meta property="og:type" content="{{ page.header.og.type|default('Article') }}" />
+    {% if page.header.og.description %}
+        <meta property="og:description" content="{{ page.header.og.description }}"/>
+    {% elseif page.content %}
+        <meta property="og:description" content="{{ page.content|truncate(100, true, '...')|striptags }}"/>
+    {% else %}
+        <meta property="og:description" content="{{ site.metadata.description }}"/>
+    {% endif %}
+    {% set header_image = page.header.header_image|defined(true) %}
+    {% set header_image_file = page.header.header_image_file %}
+    {% if header_image %}
+            {% if header_image_file %}
+                {% set header_image_media = page.media.images[header_image_file] %}
+            {% else %}
+                {% set header_image_media = page.media.images|first %}
+            {% endif %}
+    {% endif %}
+    {% if page.header.og.image.custom is defined %}
+        {% if page.header.og.image.custom == "0" %}
+        {# use the default image. #}
+        <meta property="og:image" content="{{ base_url_absolute ~ theme_url ~ '/' ~ theme_config.opengraph.default_image }}"/>
+        {% elseif page.header.og.image.custom == "1" %}
+        {# use a generated image.#}
+        <meta property="og:image" content="{{ base_url_absolute ~ header_image_media.url }}"/>
+        {% else %}
+        {# use a custom image #}
+        <meta property="og:image" content="{{ base_url_absolute ~ theme_url  ~'/'~  page.header.og.image.uri }}"
+        {% endif %}
+    {% else %}
+    {# no option: use the default image #}
+    <meta property="og:image" content="{{ base_url_absolute ~ theme_url ~ '/' ~ theme_config.opengraph.default_image }}"/>
+    {% endif %}
+    {% if theme_config.facebook.appid is defined %}
+        <meta property="fb:app_id" content="{{ theme_config.facebook.appid }}" />
+    {% endif %}
+{% endblock %}
