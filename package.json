@@ -1,0 +1,34 @@
+{
+  "name": "grav-theme-braindance",
+  "version": "1.0.0",
+  "description": "A clean theme for music venues.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jahnertz/grav-theme-braindance.git"
+  },
+  "keywords": [
+    "Grav",
+    "theme",
+    "club",
+    "music",
+    "venue"
+  ],
+  "author": "Jordan Han",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jahnertz/grav-theme-braindance/issues"
+  },
+  "homepage": "https://github.com/jahnertz/grav-theme-braindance#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "fibers": "^3.0.0",
+    "grunt": "^1.0.3",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.0.1",
+    "grunt-scss-lint": "^0.5.0",
+    "node-sass": "^4.9.3"
+  }
+}

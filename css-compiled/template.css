@@ -240,13 +240,17 @@ b, strong, label, th {
   .header-image.fullwidth #body > .listing-row {
     padding-left: 7rem;
     padding-right: 7rem; }
+
 .header-image .listing-row:last-child {
   margin-bottom: 2rem; }
+
 .header-image #body .flush-top {
   margin-top: -9.5rem;
   padding-top: 9rem; }
+
 .header-image #breadcrumbs {
   margin-top: 1rem; }
+
 .header-image #header {
   background-color: rgba(255, 255, 255, 0);
   box-shadow: none; }
@@ -313,6 +317,7 @@ h1 {
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   h2 {
     font-size: 2.1rem; } }
+
 @media only all and (max-width: 47.938em) {
   h2 {
     font-size: 2rem; } }
@@ -320,6 +325,7 @@ h1 {
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   h3 {
     font-size: 1.7rem; } }
+
 @media only all and (max-width: 47.938em) {
   h3 {
     font-size: 1.6rem; } }
@@ -327,6 +333,7 @@ h1 {
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   h4 {
     font-size: 1.35rem; } }
+
 @media only all and (max-width: 47.938em) {
   h4 {
     font-size: 1.25rem; } }
@@ -477,7 +484,7 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   border: 1px solid #ddd;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06); }
   textarea:hover, input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover, select[multiple=multiple]:hover {
-    border-color: #c4c4c4; }
+    border-color: #c4c3c3; }
   textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
     border-color: #bbb;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(174, 174, 174, 0.7); }
@@ -492,6 +499,7 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
 
 form .buttons {
   text-align: center; }
+
 form input {
   font-weight: 400; }
 
@@ -500,7 +508,7 @@ table {
   table-layout: auto; }
 
 th {
-  background: #f7f7f7;
+  background: #f7f6f6;
   padding: 0.5rem; }
 
 td {
@@ -546,7 +554,7 @@ td {
       width: 100%; } }
 
 .three-column-bullet {
-  width: 33.33333%; }
+  width: 33.3333333333%; }
   @media only all and (max-width: 47.938em) {
     .three-column-bullet {
       width: 100%; } }
@@ -614,7 +622,7 @@ td {
         #panel .navigation li ul li {
           border: 0 !important; }
           #panel .navigation li ul li a {
-            color: #c4c4c4;
+            color: #c4c3c3;
             padding: 0.2rem 1rem 0.2rem 2rem;
             font-size: 0.9rem; }
           #panel .navigation li ul li li a {
@@ -700,6 +708,7 @@ td {
 
 .related-pages li a {
   display: block; }
+
 .related-pages .score {
   display: block;
   float: right;
@@ -749,12 +758,15 @@ ul.pagination {
 
 .simplesearch h1 {
   margin-bottom: 0; }
+
 .simplesearch .center {
   text-align: center; }
+
 .simplesearch input {
   display: inline-block;
   max-width: 30rem;
   font-size: 2rem; }
+
 .simplesearch .search-image {
   margin-top: 1rem; }
   .simplesearch .search-image img {
@@ -762,14 +774,17 @@ ul.pagination {
     @media only all and (max-width: 47.938em) {
       .simplesearch .search-image img {
         display: none; } }
+
 @media only all and (max-width: 47.938em) {
   .simplesearch .search-item {
     margin-left: 0; } }
+
 .simplesearch .search-wrapper .search-submit {
   height: 52px;
   padding: 0 10px; }
   .simplesearch .search-wrapper .search-submit img {
     width: 30px; }
+
 .simplesearch .search-details {
   float: right;
   margin-top: -2.5rem;
@@ -781,6 +796,7 @@ ul.pagination {
       float: none;
       margin-top: -0.2rem;
       margin-bottom: 1rem; } }
+
 .simplesearch hr {
   border-bottom: 1px solid #eee; }
 
@@ -791,6 +807,7 @@ ul.pagination {
     color: #FFFFFF; }
   .modular.header-image #header #navbar a {
     color: #FFFFFF; }
+
 .modular .showcase {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -970,6 +987,7 @@ h1 {
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   h2 {
     font-size: 2.1rem; } }
+
 @media only all and (max-width: 47.938em) {
   h2 {
     font-size: 2rem; } }
@@ -977,6 +995,7 @@ h1 {
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   h3 {
     font-size: 1.7rem; } }
+
 @media only all and (max-width: 47.938em) {
   h3 {
     font-size: 1.6rem; } }
@@ -984,6 +1003,7 @@ h1 {
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   h4 {
     font-size: 1.35rem; } }
+
 @media only all and (max-width: 47.938em) {
   h4 {
     font-size: 1.25rem; } }
@@ -1135,12 +1155,16 @@ body #body {
   @media only all and (max-width: 47.938em) {
     body #body {
       padding-top: 5rem; } }
+
 body #body > script:first-child + .grav-lightslider {
   margin-top: -3rem; }
+
 body div#sb-site {
   background-color: #FFFFFF; }
+
 body img.left {
   padding-right: 1rem; }
+
 body img.right {
   padding-left: 1rem; }
 
@@ -1205,6 +1229,7 @@ body img.right {
   content: "";
   display: table;
   clear: both; }
+
 @media only all and (max-width: 47.938em) {
   #footer #contact p {
     line-height: 1rem;
